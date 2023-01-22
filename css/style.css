@@ -8,9 +8,9 @@
 body{
     background-image:linear-gradient(
      43deg,
-   #4158d0 0%,
-   #c450c0 46%,
-   #ffcc70 100%
+   #ced041 0%,
+   #3c2394 46%,
+   #08040f 100%
   );
   height: 100vh;
   display: flex;
@@ -20,9 +20,11 @@ body{
 
 .clock{
     width: 450px;
-    height: 450px;background-color: rgba(255, 255, 255, 0.8);
+    height: 450px;
+    color: greenyellow;
+    background-color: black;
     border-radius: 50%;
-    border: 2px solid black;
+    border: 4px solid red;
     position: relative;
 }
 
@@ -75,7 +77,6 @@ body{
 .clock .number.number-12 {
     --rotation:360deg   /*OU VOCE PODE USAR COM 0deg TAMBÉM FUNCIONA*/
 }
-
 /*PONTEIROS*/
 .clock::after{
     content: "";
@@ -91,7 +92,7 @@ body{
 
 }
 .clock .hand{
-    --rotation: 0;
+    --rotation: 0; /*SERÁ AUTERADO PELO js*/
 
     position: absolute;
     bottom: 50%;
@@ -104,22 +105,25 @@ body{
     border-top-right-radius: 12px;
 }
 
-.clock .hand.second{
+.clock .hand.seconds{
     width: 3px;
     height: 40%;
+    z-index: 12;
     background-color: red;
 }
+
 .clock .hand.minutes{
     width: 7px;
     height: 35%;
-    background-color: black;
+    background-color:greenyellow;
 }
 
 .clock .hand.hours{
     width: 10px;
-    height: 25%;
-    background-color: rgb(36, 4, 4);
+    height: 26%;
+    background-color: greenyellow;
 }
+
 
 
 
